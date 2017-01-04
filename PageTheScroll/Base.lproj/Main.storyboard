@@ -25,9 +25,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-Vz-5MA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="BB4-Rx-kaa" appends="YES" id="tj8-Qi-4Vs"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Uyc-tl-5kV">
                                 <rect key="frame" x="263" y="28" width="96" height="96"/>
@@ -42,18 +39,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="LnW-ya-WUT"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="BB4-Rx-kaa" appends="YES" id="RUq-Hx-AEp"/>
-                                </connections>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qv-Ru-hdB">
                                 <rect key="frame" x="77.5" y="0.0" width="220" height="667"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="8yE-QW-6c8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Uyc-tl-5kV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1zc-fU-NMv"/>
                             <constraint firstItem="3qv-Ru-hdB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Bn-Nd-3ee"/>
@@ -68,20 +64,24 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3qv-Ru-hdB" secondAttribute="bottom" id="sdc-lI-Cfn"/>
                             <constraint firstItem="Uyc-tl-5kV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ypR-JV-nJj"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gdg-ne-atv" appends="YES" id="G9d-tZ-Vwg"/>
+                            <outletCollection property="gestureRecognizers" destination="ON0-XJ-BiS" appends="YES" id="QHy-5k-czs"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="3qv-Ru-hdB" id="wHH-ki-AV8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="BB4-Rx-kaa">
+                <swipeGestureRecognizer direction="left" id="gdg-ne-atv">
                     <connections>
-                        <action selector="detectSwpe:" destination="BYZ-38-t0r" id="x5q-3o-Ran"/>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="cK0-XQ-LXM"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="JXE-CP-nwl">
+                <swipeGestureRecognizer direction="right" id="ON0-XJ-BiS">
                     <connections>
-                        <action selector="detectSwpe:" destination="BYZ-38-t0r" id="28r-fR-qi7"/>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="hiy-O4-wAa"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

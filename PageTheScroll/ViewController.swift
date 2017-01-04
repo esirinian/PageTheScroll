@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func detectSwpe(_ sender: UISwipeGestureRecognizer) {
+    @IBAction func detectSwipe(_ sender: UISwipeGestureRecognizer) {
         
         if (currentPage < MAX_PAGE && sender.direction == UISwipeGestureRecognizerDirection.left) {
             moveScrollView(direction: 1)
